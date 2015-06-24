@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Think In Code</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+  
+    <div id="container">
+
+      <div id="title">
+        how to think in code
+        <div style="font-size:18px;font-weight:300;margin-top:20px">Processing edition</div>
+        <div style="font-size:18px;font-weight:300;margin-top:20px"><a href="https://processing.org/reference/">reference</a></div>
+      </div>
+
+
+      <section class="type var">
+        <header>
+          I need to remember something so I can use it later
+        </header>
+        Use a variable. Useful variable types include: <a target="_blank" href="https://processing.org/reference/String.html">String</a>, <a target="_blank" href="https://processing.org/reference/int.html">integer</a>, <a target="_blank" href="https://processing.org/reference/float.html">float</a>, and <a target="_blank" href="https://processing.org/reference/boolean.html">boolean</a>. 
+        <pre><code class="js">
+  String a = "To be or not to be";
+  int b = 100;
+  float c = 3.5;
+  boolean c = false;
+        </code></pre>
+      </section>
+
+
+<!--
+      <section class="type var">
+        <header>
+          I need to write a note to myself that won't affect the program
+        </header>
+        Use a <a target="_blank" href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics#Variables">comment</a>.
+        <pre><code class="js">
+  // this is a comment
+
+  /* this comment
+     that lasts
+     multiple lines of text */
+        </code></pre>
+      </section>
+-->
+
+      <section class="type if">
+        <header>
+          I need to make a decision
+        </header>
+        Use an <a target="_blank" href="https://processing.org/reference/if.html">if statement</a>, also known as a conditional statement
+        <pre><code class="js">
+  if (x < 100) {
+    
+  } else {
+    
+  }
+        </code></pre>
+        or
+        <pre><code class="js">
+  if (name=="Ben") {
+    
+  } else {
+    
+  }
+        </code></pre>
+      </section>
+
+
+      <section class="type el">
+        <header>
+          I need to draw a shape.
+        </header>
+        Use a shape, such as a <a target="_blank" href="https://processing.org/reference/point_.html">point</a>, <a target="_blank" href="https://processing.org/reference/line_.html">line</a>, <a target="_blank" href="https://processing.org/reference/rect_.html">rect</a>, or <a target="_blank" href="https://processing.org/reference/ellipse_.html">ellipse</a>.
+        <pre><code class="js">
+  point(50,50);
+  line(0,0,10,10);
+  rect(10,10,100,100);
+  ellipse(50,50,10,10);
+        </code></pre>
+      </section>
+
+
+      <section class="type func">
+        <header>
+          I need to save an action so I can do it later
+        </header>
+        Use a function. See reference for <a target="_blank" href="https://processing.org/reference/void.html">void</a>
+        <pre><code class="js">
+  void changeBG() {
+   
+    background(0);
+  
+  }
+        </code></pre>
+  Later, you can invoke it:
+        <pre><code class="js">
+  changeBG()
+      </code></pre>
+      </section>
+
+      <section class="type arg">
+        <header>
+          I need my action to happen a little bit differently each time
+        </header>
+        Use a function with an argument.
+        <pre><code class="js">
+  void changeBG(color) {
+
+    background(color);
+
+  }
+        </code></pre>
+  Later, you can invoke it with different arguments.
+        <pre><code class="js">
+  changeBG(255);
+        </code></pre>
+  or
+        <pre><code class="js">
+  changeBG(0);
+        </code></pre>
+      </section>
+
+
+      <section class="type style">
+        <header>
+          I need to change the color or style of my shape
+        </header>
+        Set the <a target="_blank" href="https://processing.org/reference/fill_.html">fill</a> or <a target="_blank" href="https://processing.org/reference/stroke_.html">stroke</a> colors.
+        <pre><code class="js">
+  stroke(255,0,0);
+  fill(100,100,0);
+        </code></pre>
+      </section>
+
+
+      <div class="subtitle">
+        more advanced
+      </div>
+
+      <section class="type array">
+        <header>
+          I need to remember a lot of things that are related somehow
+        </header>
+        Use an <a target="_blank" href="https://processing.org/reference/Array.html">array</a>
+        <pre><code class="js">
+  Array groceries = [ "milk", "eggs", "bread" ];
+        </code></pre>
+  This invocation will return "milk":
+        <pre><code class="js">
+  groceries[0];
+        </code></pre>
+      </section>
+
+
+      <section class="type for">
+        <header>
+          I need to do something several times
+        </header>
+        Use a <a target="_blank" href="https://processing.org/reference/for.html">loop</a>
+        <pre><code class="js">
+  for (var i=0;i&lt;100;i++) {
+    //the code in here will happen 100 times
+  }
+        </code></pre>
+      </section>
+
+
+      <section class="type event">
+        <header>
+          I need to make something on my site interactive
+        </header>
+        Use a built-in interaction function like <a target="_blank" href="https://processing.org/reference/mousePressed_.html">mousePressed()</a>. This function will be called automatically when the mouse is pressed.
+        <pre><code class="js">
+  void mousePressed() {
+
+    point(mouseX, mouseY);
+
+  }
+        </code></pre>
+      </section>
+
+      <section class="type event">
+        <header>
+          I want to know where the mouse is.
+        </header>
+        Use an <a target="_blank" href="https://processing.org/reference/mouseX.html">built-in variables mouseX and mouseY</a>
+        <pre><code class="js">
+  void draw() {
+
+    line(pmouseX, pmouseY, mouseX, mouseY);
+
+  }
+        </code></pre>
+      </section>
+
+
+      <div class="subtitle">
+        examples
+      </div>
+
+    </div>
+
+    <div class="container2">
+      <header>
+        Toggle
+      </header>
+      <section class="half">
+
+        <div class="example var">
+          I need to remember something
+          <div class="hint">whether my toggle is currently on or off</div>
+        </div>
+        <div class="example event">
+          I need to add interaction
+          <div class="hint">by watching for mouse clicks</div>
+          <div class="example if">
+            I need to make a decision
+            <div class="hint">whether to turn the toggle on or toggle off</div>
+            <div class="example el">
+              I need to draw a shape
+              <div class="hint">to visually represent the change in the toggle's state</div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section class="half">
+
+        <div class="example mycode var">
+          boolean on = false;
+        </div>
+        <div class="example mycode event">
+          void mousePressed() {
+          <div class="example mycode if">
+            if (on==false) {
+            <div class="example mycode el">
+              fill(0,255,0)
+              <br>rect(10,10,100,100)
+              <br>on = true
+            </div>
+            } else {
+            <div class="example mycode el">
+              fill(200,200,200)
+              <br>rect(10,10,100,100)
+              <br>on = false
+            </div>
+            }
+          </div>
+          }
+        </div>
+      </section>
+    </div>
+
+<!--
+    <div class="container2">
+      <header>
+        Static Menu
+      </header>
+      <section class="half">
+
+        <div class="example array">
+          I need to remember a list of related items
+          <div class="hint">the items in my menu</div>
+        </div>
+        <div class="example for">
+          I need to do something several times
+          <div class="hint">make an HTML element for each menu item</div>
+          <div class="example el">
+            I need to add something to my site
+            <div class="hint">add each menu item to the page</div>
+          </div>
+        </div>
+
+      </section>
+      <section class="half">
+
+        <div class="example mycode array">
+          var items = [ 
+          <br>&nbsp; "Sign in", 
+          <br>&nbsp; "My account", 
+          <br>&nbsp; "Something else", 
+          <br>&nbsp; "Log out" 
+          <br>]
+        </div>
+        <div class="example mycode for">
+          for (var i=0;i&lt;items.length;i++) {
+          <div class="example mycode el">
+            var newItem = document.createElement("div")
+            <br>newItem.innerHTML = items[i]
+            <br>
+            <br>var container = document.getElementById("menu")
+            <br>container.appendChild(newItem)
+          </div>
+          }
+        </div>
+
+      </section>
+      <br>
+      <a target="_blank" href="http://jsfiddle.net/suncannon/by9zd5Lk/">See The Result</a>
+    </div>
+
+
+
+
+    <div class="container2">
+      <header>
+        HTML Paintbrush
+      </header>
+      <section class="half">
+
+        <div class="example event">
+          I need to make my site interactive
+          <div class="hint">to watch for mouse movement</div>
+          <div class="example el">
+            I need to add something to my site
+            <div class="hint">a tiny div for each "brushstroke"</div>
+          </div>
+          <div class="example style">
+            I need to change what my site looks like
+            <div class="hint">make the brushstroke small and colorful</div>
+          </div>
+        </div>
+
+      </section>
+      <section class="half">
+
+        <div class="example mycode event">
+          document.addEventListener("mousemove", function(e) {
+          <div class="example mycode el">
+            var d = document.createElement("div")
+            <div class="example mycode style">
+              d.style.width = "3px"
+              <br>d.style.height = "3px"
+              <br>d.style.backgroundColor = "lime"
+              <br>d.style.opacity = 0.7
+              <br>d.style.position = "absolute"
+              <br>d.style.top = e.clientY + "px"
+              <br>d.style.left = e.clientX + "px"
+            </div>
+            document.body.appendChild(d)
+          </div>
+          })
+        </div>
+
+      </section>
+      <div>
+      <a target="_blank" href="http://jsfiddle.net/suncannon/0ffcLy4v/">See The Result</a><br> This is fun, though you'd be much better off using a <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">&lt;canvas&gt;</a> for drawing !
+      </div>
+
+    </div>
+-->
+
+
+<div style="padding:40px 20px;color:white;opacity:0.9;background-color:#7af;font-size:35px">
+      Remember, there are a dozen ways to code any given idea. It is usually easier to understand your own code than to read someone else's. Steal the essentials and go be creative!
+</div>
+      
+  </body>
+</html>
