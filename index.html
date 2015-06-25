@@ -153,11 +153,15 @@
         </header>
         Use an <a target="_blank" href="https://processing.org/reference/Array.html">array</a>
         <pre><code class="js">
-  Array groceries = [ "milk", "eggs", "bread" ];
+  int[] groceries = { "milk", "eggs", "bread" };
         </code></pre>
   This invocation will return "milk":
         <pre><code class="js">
   groceries[0];
+        </code></pre>
+  This invocation will return "eggs":
+        <pre><code class="js">
+  groceries[1];
         </code></pre>
       </section>
 
@@ -168,7 +172,7 @@
         </header>
         Use a <a target="_blank" href="https://processing.org/reference/for.html">loop</a>
         <pre><code class="js">
-  for (var i=0;i&lt;100;i++) {
+  for (int i=0;i&lt;100;i++) {
     //the code in here will happen 100 times
   }
         </code></pre>
